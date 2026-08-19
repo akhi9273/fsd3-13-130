@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "akhilesh",
+    "price": 24,
+    "qty": 26
+  },
+  {
+    "id": "2",
+    "name": "shubham",
+    "price": 25,
+    "qty": 24
+  },
+  {
+    "id":"3",
+    "name": "shivam",
+    "price": 25,
+    "qty": 67
+  }
+]
