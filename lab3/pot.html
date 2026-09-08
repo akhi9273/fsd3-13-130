@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Indian Matka | Traditional Pot</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8ef;
+            color: #3d2418;
+        }
+
+        /* Navigation */
+
+        nav {
+            background: #7b351c;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd08a;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 500px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(
+                135deg,
+                #fff1d6,
+                #f8d6b0
+            );
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            color: #7b351c;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #7b351c;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .btn:hover {
+            background: #542313;
+        }
+
+        /* Pot Illustration */
+
+        .pot-area {
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pot {
+            width: 230px;
+            height: 240px;
+            background: #c86f3d;
+            border-radius: 30px 30px 100px 100px;
+            border: 8px solid #8b421f;
+            position: relative;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .pot::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 45px;
+            background: #c86f3d;
+            border: 8px solid #8b421f;
+            border-radius: 50%;
+            top: -30px;
+            left: -18px;
+        }
+
+        .pot::after {
+            content: "✦  ✦  ✦";
+            position: absolute;
+            top: 90px;
+            left: 45px;
+            font-size: 25px;
+            color: #713214;
+        }
+
+        /* About */
+
+        .about {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 38px;
+            color: #7b351c;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /* Features */
+
+        .features {
+            padding: 60px 8%;
+            background: #f8e4cc;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 38px;
+            color: #7b351c;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #7b351c;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Tradition */
+
+        .tradition {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .tradition h2 {
+            color: #7b351c;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .tradition p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #542313;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 5%;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .pot-area {
+                transform: scale(0.85);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <div class="logo">🏺 Indian Matka</div>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Indian Matka</h1>
+
+            <h2>A Tradition That Keeps Water Naturally Cool</h2>
+
+            <p>
+                The traditional Indian earthen pot, commonly known
+                as a Matka, has been used for generations to store
+                drinking water naturally.
+            </p>
+
+            <a href="#about" class="btn">
+                Explore Tradition
+            </a>
+
+        </div>
+
+
+        <div class="pot-area">
+
+            <div class="pot"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section class="about" id="about">
+
+        <h2>About Indian Pot</h2>
+
+        <p>
+            An Indian Matka is traditionally made from natural clay.
+            Its porous surface allows a small amount of water to
+            evaporate, helping the remaining water become naturally
+            cool. It is a beautiful example of traditional Indian
+            craftsmanship and sustainable living.
+        </p>
+
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="features" id="features">
+
+        <h2>Why Choose a Matka?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">💧</div>
+
+                <h3>Natural Cooling</h3>
+
+                <p>
+                    Clay pots naturally cool water through
+                    evaporation.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🌱</div>
+
+                <h3>Eco Friendly</h3>
+
+                <p>
+                    Made from natural clay and does not require
+                    electricity for cooling.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🏺</div>
+
+                <h3>Traditional</h3>
+
+                <p>
+                    Matkas represent the rich craftsmanship
+                    and traditions of India.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🇮🇳</div>
+
+                <h3>Indian Heritage</h3>
+
+                <p>
+                    A timeless part of Indian homes and culture.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Tradition Section -->
+
+    <section class="tradition">
+
+        <h2>Indian Heritage</h2>
+
+        <p>
+            From village homes to modern kitchens, the Matka
+            continues to represent the connection between
+            nature, tradition and everyday life in India.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>🏺 Indian Matka</p>
+
+        <p>Traditional Indian Pot • Made with Clay • Made with Tradition</p>
+
+        <p>© 2026 Indian Matka</p>
+
+    </footer>
+
+</body>
+
+</html>

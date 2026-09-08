@@ -22,3 +22,53 @@ package from npm
 -it also create a folder node_modules automatically 
 -node_modules holds the package /library files 
 -generally we ignore the node_modules by .gitignore
+
+
+
+
+
+
+
+
+
+Nodemon -it restart the server automatically when file change,
+to install
+
+>npm  i nodemon -D
+
+Note: -D Flag will install this package as devloper dependency 
+
+
+-to execute any program,update 
+the package.json file then start 
+the server as 
+<b> npm run dev </b>
+-start -> it will execute the app 
+on deployment 
+-dev -> it will start server in 
+devlopment phase (only for developer)
+-res: it will return contents (json/html/plain) to the user /client
+-req: it will retrive the information 
+from client to the server
+-server send also statusCodes to the client, that indicates the error /success message 
+## status codes 
+-200 ->ok 
+-201->created
+-400->BAd request 
+-402->Unautorized
+-403->forbidden
+-404->not found 
+-500->inetrnal server error 
+#Context type 
+-text/plain 
+-text/html
+-application/json
+-text/css
+
+the content type and status code can be send back to client by two ways 
+
+1.res.writeHead 
+2.res.setheader
+3.res.statusCode
+
+
