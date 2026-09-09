@@ -1,57 +1,24 @@
-import http from "http";
-import { createReadStream } from "fs";
+import https from 'https';
 
-const server = http.createServer((req, res) => {
+const server = https.createServer((req, res) => {
 
-    // Home page
-    if (req.url === "/") {
+    if (req.url === '/api/products') {
 
-        res.setHeader("Content-Type", "text/html");
+        res.end(JSON.stringify({
+            id: 1,
+            name: 'mobile',
+            price: 40000,
+            rating: 4.7,
+            review: 225
+        }));
 
-        res.write(`
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>My Web Pages</title>
-            </head>
-            <body>
-                <h1>Welcome to My Website</h1>
+    } else {
+        
+        res.statusCode(400);
+        res.end;
 
-                <a href="/pot">🇮🇳 Indian Pot</a>
-            </body>
-            </html>
-        `);
-
-        res.end();
     }
 
-    // Indian Pot page
-    else if (req.url === "/pot") {
-
-        res.setHeader("Content-Type", "text/html");
-
-        const stream = createReadStream("pot.html", {
-            encoding: "utf-8"
-        });
-
-        stream.pipe(res);
-    }
-
-    // Page not found
-    else {
-
-        res.statusCode = 404;
-
-        res.setHeader("Content-Type", "text/html");
-
-        res.end(`
-            <h1>404 - Page Not Found</h1>
-            <p>The requested page does not exist.</p>
-        `);
-    }
 });
 
-// Start server on port 4000
-server.listen(4000, () => {
-    console.log("Server running on http://localhost:4000");
-});
+server.listen(3000, () => console.log('prg4 is running.....'));

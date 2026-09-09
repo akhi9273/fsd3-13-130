@@ -72,3 +72,31 @@ the content type and status code can be send back to client by two ways
 3.res.statusCode
 
 
+
+
+
+## send html file client 
+1.html file 
+-read html file using createREADStream
+-pipe it with res objects 
+
+2.html content 
+send any html tags/contents by using 
+res.end('<any html tag>')
+##JSON server return data ferming not html content because html contents will be return by fronted devloper.the data is in JSON format 
+
+JSON always storage data in key value pair inclosed by {} 
+ARRay can store by []
+one pair on {} will be represent one objects and it's properties will be seperate by ,
+
+'''
+{
+  id :1,
+  name: 'mobile',
+  prices:2500,
+  rating:.4.5,
+  review:200
+}
+
+
+'''
