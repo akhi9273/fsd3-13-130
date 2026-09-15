@@ -1,6 +1,7 @@
-import https from 'https';
+import http from 'http';
+import {review,items} from "./data.js";
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
 
     if (req.url === '/api/products') {
 
@@ -13,9 +14,9 @@ const server = https.createServer((req, res) => {
         }));
 
     } else {
-        
-        res.statusCode(400);
-        res.end;
+
+        res.statusCode = 400;
+        res.end();
 
     }
 
