@@ -100,3 +100,12 @@ one pair on {} will be represent one objects and it's properties will be seperat
 
 
 '''
+## Headers 
+1.text/plain-> text file
+2.text/html-> html content/file
+3.application/json-> json content/file
+4. text/css -> stylesheet
+5. application/form-data -> fro upkloading file
+6. application/auth 
+ 
+ types of data by server it may html file,json data ,plane text file ,css file any token (for login)
