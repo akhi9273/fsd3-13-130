@@ -10,8 +10,18 @@ const server = http.createServer((req, res) => {
 
     
     else if (req.url === "/" && req.method === "POST") {
-        res.statusCode = 200;
-        res.end("POST Request");
+        // console.log("request:",req);
+        let body = '';
+        req.on("data",(chunk) => {
+            body +=chunk;
+        });
+        req.on("end",() => {
+            const product = JSON.parse(body);
+            console.log("recieved product:",product);
+            res.statusCode = 201;
+        res.end(JSON.stringify({messge:"product added",product}));
+        });
+        
     }
 
     
@@ -21,6 +31,7 @@ const server = http.createServer((req, res) => {
     }
  
     else if (req.url === "/" && req.method === "DELETE") {
+
         res.statusCode = 200;
         res.end("DELETE Request");
     }
@@ -34,5 +45,5 @@ const server = http.createServer((req, res) => {
 
 
 server.listen(5000, () => {
-    console.log("prg6 is running on port 5000");
+    console.log("prg6 is running");
 });
