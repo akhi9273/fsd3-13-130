@@ -31,8 +31,8 @@ const server = http.createServer((req, res) => {
       res.statusCode = 201;
       res.end(JSON.stringify({ msg: "product added", data: item }));
     });
-  } else if (req.url.startsWith("/products/") && req.method === "PUT") {
-    const productID = req.url.split("/").pop();
+  } else if (req.url.startsWith("/api/v1/products/") && req.method === "PUT") {
+    const productID = Number(req.url.split("/").pop());
     console.log("Update Product id:", productID);
     let body = "";
     req.on("data", (chunk) => {
@@ -61,9 +61,7 @@ const server = http.createServer((req, res) => {
     } else {
       res.end(JSON.stringify({ msg: `product with id ${pid} not found` }));
     }
-  } 
-  
-  else if (req.url.startsWith("/api/v1/products/") && req.method === "GET") {
+  } else if (req.url.startsWith("/api/v1/products/") && req.method === "GET") {
     const pid = Number(req.url.split("/").pop());
     res.statusCode = 200;
     const product = getProductById(pid);
@@ -73,10 +71,7 @@ const server = http.createServer((req, res) => {
     } else {
       res.end(JSON.stringify({ msg: `product with id ${pid} not found` }));
     }
-  } 
-  
-  
-  else {
+  } else {
     res.statusCode = 404;
     res.end("request not found");
   }
