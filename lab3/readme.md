@@ -109,3 +109,8 @@ one pair on {} will be represent one objects and it's properties will be seperat
 6. application/auth 
  
  types of data by server it may html file,json data ,plane text file ,css file any token (for login)
+ 
+ for get -no parameter to the sever when we recieved all item 
+ POST-to add record we pass the value from body section in JSON format off API tester
+ DEL-to delete anty product we pas parameter that is id of products from URL
+ UPDATE-(put/patch)-update any products we pass id from URL and data to upadte from body
