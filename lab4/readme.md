@@ -15,3 +15,21 @@
 6. create prg1.js in folder
 7. add folderName/node_module in .gitignore
 8. we can also add status code with status function it can be change in send function 
+## map
+
+
+  this fucntion is used to iterate any arr it must reaturn new arr 
+  syntax
+  ```
+  array.map((item))=>{
+    return
+  })
+  array.map((item)=>())
+  ```
+ in first syntax we have to used return keyworsd where in syntax 2 is not requirsedd 
+ exclude number of properties fronm any json objects 
+## search
+
+ to search any item in json array we used find method it will return null on unsuccessful on objects on successful
+```
+arra.find((item)=>ietm.id===id);
